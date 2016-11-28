@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, hashHistory } from 'react-router';<% if (sm === 'redux') { %>
+import { Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 
@@ -7,13 +7,7 @@ import store from '../store';
 import routes from './routes';
 
 const stores = { store };
-const history = syncHistoryWithStore(hashHistory, store);<% } else { %>
-import { Provider } from 'mobx-react';
-
-import * as stores from '../stores';
-import routes from './routes';
-
-const history = hashHistory;<% } %>
+const history = syncHistoryWithStore(hashHistory, store);
 
 const DevTools = global.DEBUG ? require('./devtools').default : () => null;
 
