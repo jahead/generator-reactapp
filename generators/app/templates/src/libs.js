@@ -7,10 +7,7 @@ import 'isomorphic-fetch';
 import 'whatwg-fetch';
 import 'restful.js';
 import 'store';
-import 'react-css-modules';<% if (sm === 'mobx') { %>
-import 'es6-promise/auto';
-import 'mobx';
-import 'mobx-react';<% } else { %>
+import 'react-css-modules';
 import 'babel-polyfill';
 import 'react-redux';
 import 'redux';
@@ -18,4 +15,4 @@ import 'redux-saga';
 import 'react-router-redux';
 import 'reselect';
 import 'normalizr';
-import 'immutable';<% } %>
+import 'immutable';

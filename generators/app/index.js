@@ -14,16 +14,7 @@ module.exports = yeoman.Base.extend({
         name: 'appname',
         message: 'Your project name',
         default: this.appname.replace(/\s/g, '-'),
-      },
-      {
-        type: 'list',
-        name: 'sm',
-        message: 'Which state manager you want to use',
-        choices: [
-          'redux',
-          'mobx',
-        ],
-      },
+      }
     ];
 
     return this.prompt(prompts).then(function (props) {
@@ -52,11 +43,6 @@ module.exports = yeoman.Base.extend({
     this.fs.copy(
       this.templatePath('api.js'),
       this.destinationPath('api.js')
-    );
-
-    this.fs.copy(
-      this.templatePath('gulpfile.js'),
-      this.destinationPath('gulpfile.js')
     );
 
     this.fs.copy(
@@ -95,16 +81,6 @@ module.exports = yeoman.Base.extend({
     );
 
     const ignore = {
-      redux: ['**/test/stores/**', '**/src/stores/**'],
-      mobx: [
-        '**/test/sagas/**',
-        '**/src/actions/**',
-        '**/src/store/**',
-        '**/src/reducers/**',
-        '**/src/selectors/**',
-        '**/src/schemas/**',
-        '**/src/sagas/**',
-      ],
     };
 
     this.fs.copyTpl(
@@ -112,23 +88,12 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('test'),
       this.props,
       null,
-      {
-        globOptions: {
-          ignore: ignore[this.props.sm],
-        },
-      }
     );
 
     this.fs.copyTpl(
       this.templatePath('src'),
       this.destinationPath('src'),
       this.props,
-      null,
-      {
-        globOptions: {
-          ignore: ignore[this.props.sm],
-        },
-      }
     );
 
     this.fs.copy(

@@ -1,8 +1,8 @@
 {
-  "name": "generator-reactapp",
-  "version": "1.5.3",
+  "name": "generator-tmc-reactapp",
+  "version": "0.0.1",
   "description": "Yeoman generator",
-  "homepage": "https://github.com/Jackong/generator-reactapp",
+  "homepage": "https://github.com/jahead/generator-reactapp",
   "author": {
     "name": "Jackong",
     "email": "",
@@ -25,38 +25,25 @@
     "yeoman-generator"
   ],
   "license": "MIT",
-  "repository": "Jackong/generator-reactapp",
-  "scripts": {
-    "test": "gulp",
-    "prepublish": "gulp prepublish"
-  },
+  "repository": "jahead/generator-reactapp",
   "dependencies": {
-    "chalk": "^1.0.0",
+    "chalk": "^1.1.3",
     "plural": "^0.2.0",
-    "yeoman-generator": "^0.23.0",
-    "yosay": "^1.0.0"
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^1.2.1"
   },
   "devDependencies": {
-    "babel-eslint": "^6.0.4",
-    "eslint": "^3.1.1",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-babel": "^3.2.0",
-    "eslint-plugin-import": "^1.8.1",
-    "eslint-plugin-jsx-a11y": "^1.2.2",
-    "eslint-plugin-react": "^5.1.1",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.11.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.1",
+    "eslint-plugin-react": "^6.7.1",
     "mocha": "*",
-    "yeoman-test": "^1.0.0",
-    "yeoman-assert": "^2.0.0",
-    "eslint-config-xo-space": "^0.15.0",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-istanbul": "^1.0.0",
-    "gulp-mocha": "^3.0.1",
-    "gulp-plumber": "^1.0.0",
-    "gulp-nsp": "^2.1.0",
-    "gulp-coveralls": "^0.1.0"
+    "yeoman-test": "^1.5.1",
+    "yeoman-assert": "^2.2.1",
+    "eslint-config-xo-space": "^0.15.0"
   },
   "eslintConfig": {
     "extends": "xo-space",

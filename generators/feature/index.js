@@ -20,7 +20,6 @@ module.exports = yeoman.Base.extend({
           'component',
           'style',
           'api',
-          'store',
           'action',
           'reducer',
           'schema',
