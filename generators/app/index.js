@@ -87,13 +87,13 @@ module.exports = yeoman.Base.extend({
       this.templatePath('test'),
       this.destinationPath('test'),
       this.props,
-      null,
+      null
     );
 
     this.fs.copyTpl(
       this.templatePath('src'),
       this.destinationPath('src'),
-      this.props,
+      this.props
     );
 
     this.fs.copy(
