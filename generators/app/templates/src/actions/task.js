@@ -1,3 +1,23 @@
-import { createRequestTypes } from './creator';
-
-export default createRequestTypes('TASK', ['GET_LIST', 'UPDATE', 'ADD', 'REMOVE']);
+const TASK = {
+    GET_LIST: {
+        SUCCESS: 'ON_TASK_GET_LIST_SUCCESS',
+        FAILURE: 'ON_TASK_GET_LIST_FAILURE',
+        REQUEST: 'ON_TASK_GET_LIST_REQUEST'
+    },
+    ADD: {
+        SUCCESS: 'ON_TASK_ADD_SUCCESS',
+        FAILURE: 'ON_TASK_ADD_FAIL',
+        REQUEST: 'ON_TASK_ADD_REQUEST'
+    },
+    UPDATE: {
+        SUCCESS: 'ON_TASK_UPDATE_SUCCESS',
+        FAILURE: 'ON_TASK_UPDATE_FAILURE',
+        REQUEST: 'ON_TASK_UPDATE_REQUEST'
+    },
+    REMOVE: {
+        SUCCESS: 'ON_TASK_REMOVE_SUCCESS',
+        FAILURE: 'ON_TASK_REMOVE_FAILURE',
+        REQUEST: 'ON_TASK_REMOVE_REQUEST'
+    }
+}
+export default TASK;

@@ -1,5 +1,3 @@
-import { createTypes } from './creator';
-
 export const action = (type, payload, meta) => ({
   type,
   payload,
@@ -7,4 +5,6 @@ export const action = (type, payload, meta) => ({
   error: payload instanceof Error,
 });
 
-export const ERROR = createTypes('ERROR', ['CATCH']);
+export const ERROR = {
+    CATCH: 'ERROR_CATCH'
+  };

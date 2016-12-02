@@ -17,4 +17,5 @@ export const entities = reducer({
 export const result = reducer({
   [TASK.GET_LIST.SUCCESS]: (state, { payload }) => state.merge(payload.result.tasks),
   [TASK.ADD.SUCCESS]: (state, { payload }) => state.push(payload.result.task),
+  [TASK.UPDATE.SUCCESS]: (state, { payload }) => state.remove(state.indexOf(payload)),
 }, init.get('result'));
